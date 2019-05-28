@@ -8,8 +8,11 @@ Learning curve for DQN-HER:
 
 ![alt text](https://user-images.githubusercontent.com/46422351/55673889-a6f6e000-58b6-11e9-980f-b07cac8b8b13.png)
 
+
+
 Learning curve for PG-HER:
 ![alt text](https://user-images.githubusercontent.com/46422351/58496974-9f9bd680-8183-11e9-929e-679b2fb3ef6b.png)
+
 
 
 And some examples of trajectories using a trained agent:
