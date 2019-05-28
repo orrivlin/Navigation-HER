@@ -2,11 +2,14 @@
 ### 2D navigation using DQN and Hindsight Experience Replay
 
 This repository contains a PyTorch implementation of a simple 2D navigation environment, in which an agent needs to traverse a map and arrive at a destination pixel, while circumventing onstacles. Both agent position and goal are given implicitly in the input image.
-For every step in which the agent has not arrived at the goal, it recieves a -1 reward, which makes the problem difficult. To train the agent, I am using a standard DQN algorithm coupled with HER (Hindsight Experience Replay), which helps to overcome the sparse rewards. This is a work in progress, so far I have only managed to achieve around 80% success rate in arriving at the goal, and training takes quite a few hours. Hopefully in the future I can achieve higher success rates. I tried toying with the size of the neural network, but did not see much improvement when using larger models.
+For every step in which the agent has not arrived at the goal, it recieves a -1 reward, which makes the problem difficult. To train the agent, I started by using a standard DQN algorithm coupled with HER (Hindsight Experience Replay), which helps to overcome the sparse rewards. This has only managed to achieve around 80% success rate in arriving at the goal, and training takes quite a few hours. Next, I implemented an actor-critic version of HER, and recently achieved ~90% success rate in getting to the goal pixel. I think that if I used a more sophisticated learning algorithm such as Proximal-Policy-Optimization or Soft-Actor-Critic, I could probably get better results. This was great fun to work on.
 
-Learning curve:
+Learning curve for DQN-HER:
 
 ![alt text](https://user-images.githubusercontent.com/46422351/55673889-a6f6e000-58b6-11e9-980f-b07cac8b8b13.png)
+
+Learning curve for PG-HER:
+
 
 
 And some examples of trajectories using a trained agent:
