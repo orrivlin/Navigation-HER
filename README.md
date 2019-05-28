@@ -11,6 +11,7 @@ Learning curve for DQN-HER:
 
 
 Learning curve for PG-HER:
+
 ![alt text](https://user-images.githubusercontent.com/46422351/58496974-9f9bd680-8183-11e9-929e-679b2fb3ef6b.png)
 
 
