@@ -7,7 +7,7 @@ Created on Mon Feb 25 07:57:53 2019
 
 import torch 
 import numpy as np
-from Models import BigConvNet2
+from Models import ConvNet2
 from Nav2D import Navigate2D
 from copy import deepcopy as dc
 import torch.nn.functional as F
@@ -19,7 +19,7 @@ Dobs = 2
 Rmin = 10
 env = Navigate2D(N,Nobs,Dobs,Rmin)
 [Sdim,Adim] = env.get_dims()
-model = BigConvNet2(Sdim[0],Sdim[0],3,Adim).cuda()
+model = ConvNet2(Sdim[0],Sdim[0],3,Adim).cuda()
 model.load_state_dict(torch.load('nav2d_model_PG.pt'))
 model.eval()
 start_obs, done = env.reset()
